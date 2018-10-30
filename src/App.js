@@ -1,25 +1,40 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import ParallaxDisplay from "./components/ParallaxDisplay";
+import ProjectsDisplay from "./components/ProjectsDisplay";
+
+import ReallySmoothScroll from "really-smooth-scroll";
+
+ReallySmoothScroll.shim();
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      navbar: false
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+        <NavBar />
+        <ParallaxDisplay
+          img={"/parallaxFront.jpg"}
+          heightSize={"100vh"}
+          textColor={"white"}
+        />
+        <div className="introduction-section">
+          <p
+            style={{
+              textAlign: "center"
+            }}
           >
-            Learn React
-          </a>
-        </header>
+            TBone does things that others are too scared to do...
+          </p>
+        </div>
+        <ProjectsDisplay />
       </div>
     );
   }
