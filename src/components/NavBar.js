@@ -40,8 +40,8 @@ export default class NavBar extends React.Component {
         }}
         style={{
           navHeight: this.state.navBarAnim
-            ? spring(60, { stiffness: 60, damping: 15 })
-            : spring(80, { stiffness: 60, damping: 15 }),
+            ? spring(80, { stiffness: 60, damping: 15 })
+            : spring(100, { stiffness: 60, damping: 15 }),
           navOpacity: this.state.navBarAnim
             ? spring(1, { stiffness: 60, damping: 15 })
             : spring(0, { stiffness: 60, damping: 15 }),
