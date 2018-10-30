@@ -20,11 +20,24 @@ export default function ParallaxDisplay(props) {
           height: props.heightSize,
           width: "100%",
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center"
         }}
       >
-        Tbone
+        <div
+          style={{
+            fontSize: props.title ? "55px" : "25px",
+            textShadow: props.title ? "2px 2px 2px #333" : "0px #333",
+            fontWeight: props.title ? "bold" : "normal",
+            letterSpacing: "3px"
+          }}
+        >
+          {props.titleDescription}
+        </div>
+        <p style={{ fontWeight: "normal", fontSize: "25px", opacity: 0.85 }}>
+          {props.subDescription}
+        </p>
       </div>
     </Parallax>
   );

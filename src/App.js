@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import ParallaxDisplay from "./components/ParallaxDisplay";
 import ProjectsDisplay from "./components/ProjectsDisplay";
+import SkillsDisplay from "./components/SkillsDisplay";
 
 import ReallySmoothScroll from "really-smooth-scroll";
 
@@ -24,6 +25,9 @@ class App extends Component {
           img={"/parallaxFront.jpg"}
           heightSize={"100vh"}
           textColor={"white"}
+          title={true}
+          titleDescription={"Tbone"}
+          subDescription={"The Man with the Plan"}
         />
         <div className="introduction-section">
           <p
@@ -35,6 +39,7 @@ class App extends Component {
           </p>
         </div>
         <ProjectsDisplay />
+        <SkillsDisplay />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Motion, spring } from "react-motion";
+import ProjectTile from "./ProjectTile";
 
 export default class ProjectsDisplay extends React.Component {
   constructor() {
@@ -19,48 +20,33 @@ export default class ProjectsDisplay extends React.Component {
         }}
       >
         {mot => {
-          // Outer Container
           return (
-            <div
-              style={{
-                alignItems: "center",
-                backgroundColor: "#FFFFFF",
-                display: "flex",
-                flexDirection: "column",
-                height: "70vh",
-                justifyContent: "center",
-                width: "100%"
-              }}
-            >
+            // Outer Container
+            <div className="project-outer-container">
               {/* Inner Container */}
-              <div style={{ width: "50%" }}>
+              <div className="project-inner-upper">
                 {/* Upper Titles */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    height: "20vh"
-                  }}
-                >
-                  <div>
-                    <p>LatestWorks</p>
-                    <p>Here's my jazz</p>
-                  </div>
-                  <div
-                    style={{ cursor: "pointer" }}
-                    onMouseEnter={() => this.setState({ viewAllHover: true })}
-                    onMouseLeave={() => this.setState({ viewAllHover: false })}
-                  >
-                    <img
-                      src={"/view-all-icon.png"}
-                      alt="view all icon"
-                      style={{ opacity: mot.viewAllOpacity }}
-                    />
-                  </div>
+                <div>
+                  <div style={{ fontSize: "40px" }}>My Latest Works</div>
+                  <p>Here's my jazz</p>
                 </div>
-                {/* Collage */}
-                <div style={{ height: "60vh" }}>Collage</div>
+                <div
+                  style={{ cursor: "pointer" }}
+                  onMouseEnter={() => this.setState({ viewAllHover: true })}
+                  onMouseLeave={() => this.setState({ viewAllHover: false })}
+                >
+                  <img
+                    src={"/view-all-icon.png"}
+                    alt="view all icon"
+                    style={{ opacity: mot.viewAllOpacity }}
+                  />
+                </div>
+              </div>
+              {/* Collage */}
+              <div className="project-inner-lower">
+                <ProjectTile name={"Restaurant Roulette"} img={""} />
+                <ProjectTile name={"Trivia"} img={""} />
+                <ProjectTile name={"RoboRace"} img={""} />
               </div>
             </div>
           );

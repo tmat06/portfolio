@@ -83,6 +83,12 @@ summary,
 time,
 mark,
 audio,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 video {
   margin: 0;
   padding: 0;
@@ -98,6 +104,12 @@ details,
 figcaption,
 figure,
 footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 header,
 hgroup,
 menu,
@@ -127,6 +139,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-. {
+* {
   box-sizing: border-box;
 }
