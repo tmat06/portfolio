@@ -82,7 +82,7 @@ export default class NavBar extends React.Component {
                 >
                   <img
                     alt="Tim Matthews Icon"
-                    src="/duckHead.PNG"
+                    src="/images/tm.svg.png"
                     style={{ height: mot.navHeight, opacity: mot.iconHover }}
                   />
                 </div>
