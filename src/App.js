@@ -64,6 +64,7 @@ class App extends Component {
                 <IconDisplay img="/images/node.png" title="Node" />
                 <IconDisplay img="/images/postgresql.png" title="PostgreSQL" />
                 <IconDisplay img="/images/express.png" title="Express" />
+                <IconDisplay img="/images/socket-io.svg" title="Socket.io" />
               </div>
             </div>
           }

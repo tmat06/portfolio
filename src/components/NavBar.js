@@ -62,7 +62,7 @@ export default class NavBar extends React.Component {
               <div
                 style={{
                   opacity: mot.navOpacity,
-                  backgroundColor: "rgb(75, 70, 70)",
+                  backgroundColor: "#191919",
                   height: "100%",
                   width: "100%"
                 }}
