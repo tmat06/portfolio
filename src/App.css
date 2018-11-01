@@ -3,7 +3,7 @@
 
 .App {
   align-items: center;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -43,13 +43,13 @@
   justify-content: space-between;
   align-items: center;
   height: 20vh;
-  width: 70%;
+  width: 50%;
 }
 
 .project-inner-lower {
-  width: 70%;
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -59,7 +59,7 @@
   display: flex;
   height: 300px;
   justify-content: center;
-  margin: 1em 10px;
+  margin: 1em 0;
   overflow: hidden;
   position: relative;
   width: 300px;
@@ -83,12 +83,232 @@
   letter-spacing: 3px;
 }
 
-@media screen and (max-width: 700px) {
+.contact-container {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  width: 50%;
+}
+
+.contact-container-upper-header {
+  height: 10vh;
+  width: 100%;
+}
+
+/* Dog Animation//////////////////////////////////////// */
+
+.dog-frame {
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dog-head {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.dog-ears {
+  background-color: rgb(43, 28, 28);
+  border-radius: 25px;
+  height: 100px;
+  width: 30px;
+}
+
+.dog-face {
+  align-items: center;
+  background-color: chocolate;
+  border-radius: 100px;
+  box-shadow: 2px 2px 2px #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 170px;
+  width: 180px;
+  z-index: 1;
+}
+
+.dog-body {
+  height: 250px;
+  width: 125px;
+  border-radius: 200px;
+  background-color: lightseagreen;
+  position: absolute;
+  top: 170px;
+  box-shadow: 5px 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dog-body-collar {
+  display: flex;
+  justify-content: center;
+}
+
+.dog-body-collar-flap {
+  width: 80px;
+  height: 20px;
+  box-shadow: 1px 1px 1px black;
+  margin: -15px 5px;
+  background: gainsboro;
+}
+
+.dog-body-knot {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  border: 15px solid rgb(177, 79, 79);
+  border-top: 0px dotted rgba(0, 0, 0, 0);
+  border-bottom: 30px dotted rgba(0, 0, 0, 0);
+  border-radius: 30px;
+  font: normal 100% / normal Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  z-index: 1.5;
+}
+
+.dog-body-tie {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 21px 152px 21px;
+  border-color: transparent transparent rgb(177, 79, 79) transparent;
+  margin: -55px 0 0 0;
+}
+
+.dog-paws {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 45px;
+  background-color: chocolate;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 3px 3px 3px #333;
+  border-radius: 50px;
+}
+
+.dog-claw {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+}
+
+.dog-head-eyes-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dog-head-eye {
+  height: 50px;
+  width: 50px;
+  background-color: #fafafa;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.dog-head-mouth {
+  width: 80%;
+  background-color: tan;
+  height: 50px;
+  border-radius: 100px;
+  box-shadow: 2px 2px 2px #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dog-head-eye-pupil {
+  height: 25px;
+  width: 25px;
+  background-color: #333;
+  border-radius: 25px;
+}
+
+.dog-head-nose {
+  height: 20px;
+  width: 15px;
+  background-color: #333;
+  border-radius: 15px;
+}
+
+.dog-head-mouth-smile {
+  width: 30%;
+  margin-left: 10px;
+  height: 5px;
+  border-radius: 15px;
+  background-color: #333;
+}
+
+/* End of Dog Animation///////////////////////////////// */
+
+@media screen and (max-width: 1700px) {
+  .project-inner-upper {
+    width: 60%;
+  }
+
+  .project-inner-lower {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1535px) {
+  .project-inner-upper {
+    width: 70%;
+  }
+
+  .project-inner-lower {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1325px) {
+  .project-inner-upper {
+    width: 80%;
+  }
+
+  .project-inner-lower {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .project-inner-upper {
+    width: 90%;
+  }
+
+  .project-inner-lower {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1025px) {
   .project-inner-upper {
     width: 100%;
   }
+
   .project-inner-lower {
     width: 100%;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 916px) {
+  .project-inner-upper {
+    justify-content: space-around;
   }
 }
 
