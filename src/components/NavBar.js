@@ -6,7 +6,10 @@ export default class NavBar extends React.Component {
     super();
     this.state = {
       navBarAnim: false,
-      hamHover: false
+      emailHover: false,
+      githubHover: false,
+      linkedInHover: false,
+      facebookHover: false
     };
   }
 
@@ -45,11 +48,17 @@ export default class NavBar extends React.Component {
           navOpacity: this.state.navBarAnim
             ? spring(1, { stiffness: 60, damping: 15 })
             : spring(0, { stiffness: 60, damping: 15 }),
-          hamHover: this.state.hamHover
+          emailHover: this.state.emailHover
             ? spring(0.6, { stiffness: 125, damping: 15 })
             : spring(1, { stiffness: 125, damping: 15 }),
-          iconHover: this.state.iconHover
-            ? spring(0.8, { stiffness: 125, damping: 15 })
+          githubHover: this.state.githubHover
+            ? spring(0.6, { stiffness: 125, damping: 15 })
+            : spring(1, { stiffness: 125, damping: 15 }),
+          linkedInHover: this.state.linkedInHover
+            ? spring(0.6, { stiffness: 125, damping: 15 })
+            : spring(1, { stiffness: 125, damping: 15 }),
+          facebookHover: this.state.facebookHover
+            ? spring(0.6, { stiffness: 125, damping: 15 })
             : spring(1, { stiffness: 125, damping: 15 })
         }}
       >
@@ -76,26 +85,77 @@ export default class NavBar extends React.Component {
                 }}
               >
                 <div
-                  style={{ marginLeft: 10, cursor: "pointer" }}
-                  onMouseEnter={() => this.setState({ iconHover: true })}
-                  onMouseLeave={() => this.setState({ iconHover: false })}
+                  style={{ cursor: "pointer" }}
+                  onMouseEnter={() => this.setState({ emailHover: true })}
+                  onMouseLeave={() => this.setState({ emailHover: false })}
                 >
                   <img
-                    alt="Tim Matthews Icon"
-                    src="/images/tm.svg.png"
-                    style={{ height: mot.navHeight, opacity: mot.iconHover }}
+                    alt="Email Menu Icon"
+                    src="/email.PNG"
+                    style={{ height: mot.navHeight, opacity: mot.emailHover }}
                   />
                 </div>
-                <div
-                  style={{ marginRight: 10, cursor: "pointer" }}
-                  onMouseEnter={() => this.setState({ hamHover: true })}
-                  onMouseLeave={() => this.setState({ hamHover: false })}
-                >
-                  <img
-                    alt="Hamburger Menu Icon"
-                    src="/hamburger.PNG"
-                    style={{ height: mot.navHeight, opacity: mot.hamHover }}
-                  />
+                <div style={{ display: "flex" }}>
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onMouseEnter={() => this.setState({ facebookHover: true })}
+                    onMouseLeave={() => this.setState({ facebookHover: false })}
+                  >
+                    <a
+                      href="https://www.facebook.com/timmy.matthews"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="Facebook Icon"
+                        src="/facebook.png"
+                        style={{
+                          height: mot.navHeight,
+                          opacity: mot.facebookHover
+                        }}
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onMouseEnter={() => this.setState({ githubHover: true })}
+                    onMouseLeave={() => this.setState({ githubHover: false })}
+                  >
+                    <a
+                      href="https://github.com/tmat06"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="Github Menu Icon"
+                        src="/github.PNG"
+                        style={{
+                          height: mot.navHeight,
+                          opacity: mot.githubHover
+                        }}
+                      />
+                    </a>
+                  </div>
+                  <div
+                    style={{ cursor: "pointer" }}
+                    onMouseEnter={() => this.setState({ linkedInHover: true })}
+                    onMouseLeave={() => this.setState({ linkedInHover: false })}
+                  >
+                    <a
+                      href="https://www.linkedin.com/in/timmy-matthews/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="LinkedIn Menu Icon"
+                        src="/linkedin.PNG"
+                        style={{
+                          height: mot.navHeight,
+                          opacity: mot.linkedInHover
+                        }}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
