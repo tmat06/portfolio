@@ -88,7 +88,8 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  min-height: 80vh;
+  overflow: auto;
   justify-content: center;
   width: 50%;
 }
@@ -96,6 +97,7 @@
 .contact-container-upper-header {
   height: 10vh;
   width: 100%;
+  font-size: 40px;
 }
 
 /* Dog Animation//////////////////////////////////////// */
@@ -145,7 +147,6 @@
   border-radius: 200px;
   background-color: lightseagreen;
   position: absolute;
-  top: 170px;
   box-shadow: 5px 5px 5px black;
   display: flex;
   flex-direction: column;
@@ -251,8 +252,6 @@
 }
 
 .dog-head-mouth-smile {
-  width: 30%;
-  margin-left: 10px;
   height: 5px;
   border-radius: 15px;
   background-color: #333;
@@ -294,6 +293,10 @@
 
   .project-inner-lower {
     width: 90%;
+  }
+
+  .contact-container {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1025px) {
