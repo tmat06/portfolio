@@ -98,6 +98,8 @@
   height: 10vh;
   width: 100%;
   font-size: 40px;
+  display: flex;
+  align-items: center;
 }
 
 /* Dog Animation//////////////////////////////////////// */

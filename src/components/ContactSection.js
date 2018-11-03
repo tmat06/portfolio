@@ -8,11 +8,11 @@ export default class ContactSection extends React.Component {
   constructor() {
     super();
     this.state = {
-      input1: false,
-      input2: false,
       waiting: true,
       timer: {},
-      name: ""
+      name: "",
+      email: "",
+      message: ""
     };
   }
 
@@ -25,17 +25,17 @@ export default class ContactSection extends React.Component {
     this.setState({ timer });
   }
 
-  stopTimer() {
-    clearInterval(this.state.timer);
+  inputAnim() {
+    // clearInterval(this.state.timer);
   }
 
   handleEmail() {
-    swal(
-      "Message was sent!",
-      "Thank you and I'll be in Contact with you shortly",
-      "success"
-    );
-    this.setState({ message: "" });
+    // swal(
+    //   "Message was sent!",
+    //   "Thank you and I'll be in Contact with you shortly",
+    //   "success"
+    // );
+    // this.setState({ message: "" });
   }
 
   render() {
@@ -180,7 +180,9 @@ export default class ContactSection extends React.Component {
                 </div>
               </div>
               {/* End of Dog Animation */}
-              <div
+              <form
+                action="https://formspree.io/timmy.a.matthews@gmail.com"
+                method="POST"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -189,35 +191,33 @@ export default class ContactSection extends React.Component {
                   width: "100%"
                 }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "100%"
-                  }}
-                >
-                  <TextField
-                    label="Name*"
-                    style={{ width: "100%" }}
-                    value={this.state.name}
-                    onChange={e => this.setState({ name: e.target.value })}
-                    margin="normal"
-                    variant="outlined"
-                    onClick={() => this.stopTimer()}
-                  />
-                  <TextField
-                    label="Email*"
-                    style={{ width: "100%" }}
-                    value={this.state.email}
-                    onChange={e => this.setState({ email: e.target.value })}
-                    margin="normal"
-                    variant="outlined"
-                    onClick={() => this.stopTimer()}
-                  />
-                </div>
+                <TextField
+                  label="Name*"
+                  type="text"
+                  name="name"
+                  style={{ width: "100%" }}
+                  value={this.state.name}
+                  onChange={e => this.setState({ name: e.target.value })}
+                  margin="normal"
+                  variant="outlined"
+                  onClick={() => this.inputAnim()}
+                />
+                <TextField
+                  label="Email*"
+                  type="text"
+                  name="email"
+                  style={{ width: "100%" }}
+                  value={this.state.email}
+                  onChange={e => this.setState({ email: e.target.value })}
+                  margin="normal"
+                  variant="outlined"
+                  onClick={() => this.inputAnim()}
+                />
+
                 <TextField
                   label="Message"
+                  type="text"
+                  name="Message"
                   style={{ width: "100%" }}
                   value={this.state.message}
                   onChange={e => this.setState({ message: e.target.value })}
@@ -225,17 +225,31 @@ export default class ContactSection extends React.Component {
                   rows="6"
                   margin="normal"
                   variant="outlined"
-                  onClick={() => this.stopTimer()}
+                  onClick={() => this.inputAnim()}
                 />
+
                 <Button
+                  disabled={
+                    this.state.name && this.state.email && this.state.message
+                      ? false
+                      : true
+                  }
+                  type="submit"
+                  value="Send"
                   fullWidth={true}
+                  type="submit"
                   aria-label="Send"
                   variant="extendedFab"
                   onClick={() => this.handleEmail()}
                 >
                   Send
                 </Button>
-              </div>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="http://localhost:3000"
+                />
+              </form>
             </div>
           );
         }}
