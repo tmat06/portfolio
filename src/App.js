@@ -6,6 +6,7 @@ import QuoteDisplay from "./components/QuoteDisplay";
 import ProjectsDisplay from "./components/ProjectsDisplay";
 import SkillsDisplay from "./components/SkillsDisplay";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 import ReallySmoothScroll from "really-smooth-scroll";
 
@@ -55,6 +56,7 @@ class App extends Component {
           }
         />
         <ContactSection />
+        <Footer />
       </div>
     );
   }
