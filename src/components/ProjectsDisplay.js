@@ -45,6 +45,7 @@ export default class ProjectsDisplay extends React.Component {
               {/* Collage */}
               <div className="project-inner-lower">
                 <ProjectTile name={"Restaurant Roulette"} img={""} />
+                <ProjectTile name={"MooMoo Farms Delivery"} img={""} />
                 <ProjectTile name={"Trivia"} img={""} />
                 <ProjectTile name={"RoboRace"} img={""} />
               </div>
