@@ -9,9 +9,40 @@ export default function Footer() {
         marginTop: "15px",
         backgroundColor: "lightgrey",
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         alignItems: "center"
       }}
-    />
+    >
+      <div
+        style={{
+          width: "30%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <div>timmy.a.matthews@gmail.com</div>
+      </div>
+      <div
+        style={{
+          width: "30%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <div>(801) 919-6330</div>
+      </div>
+      <div
+        style={{
+          width: "30%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <div>Provo, Utah USA</div>
+      </div>
+    </div>
   );
 }

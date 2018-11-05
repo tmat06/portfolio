@@ -1,5 +1,6 @@
 import React from "react";
 import { Motion, spring } from "react-motion";
+import { Link } from "react-router-dom";
 
 export default class ProjectTile extends React.Component {
   constructor() {
@@ -26,31 +27,33 @@ export default class ProjectTile extends React.Component {
       >
         {mot => {
           return (
-            <div
-              className="project-outer-tile"
-              onMouseEnter={() => this.setState({ tileHover: true })}
-              onMouseLeave={() => this.setState({ tileHover: false })}
-            >
-              <div className="project-inner-tile">
-                <img
-                  src={this.props.img ? this.props.img : "/duckHead.PNG"}
-                  alt={`${this.props.title} title page`}
-                  style={{
-                    opacity: mot.imageOpacity,
-                    height: `${mot.imageHover}px`,
-                    width: `${mot.imageHover}px`
-                  }}
-                />
-              </div>
+            <Link to={`/project/${this.props.name}`}>
               <div
-                className="project-inner-title"
-                style={{
-                  opacity: mot.titleOpacity
-                }}
+                className="project-outer-tile"
+                onMouseEnter={() => this.setState({ tileHover: true })}
+                onMouseLeave={() => this.setState({ tileHover: false })}
               >
-                {this.props.name}
+                <div className="project-inner-tile">
+                  <img
+                    src={this.props.img ? this.props.img : "/duckHead.PNG"}
+                    alt={`${this.props.title} title page`}
+                    style={{
+                      opacity: mot.imageOpacity,
+                      height: `${mot.imageHover}px`,
+                      width: `${mot.imageHover}px`
+                    }}
+                  />
+                </div>
+                <div
+                  className="project-inner-title"
+                  style={{
+                    opacity: mot.titleOpacity
+                  }}
+                >
+                  {this.props.name}
+                </div>
               </div>
-            </div>
+            </Link>
           );
         }}
       </Motion>
