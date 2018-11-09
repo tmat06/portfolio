@@ -3,13 +3,7 @@ import React from "react";
 export default function QuoteDisplay(props) {
   return (
     <div className="introduction-section">
-      <p
-        style={{
-          textAlign: "center"
-        }}
-      >
-        {props.quote}
-      </p>
+      <p className="introduction-section-inner">{props.quote}</p>
     </div>
   );
 }

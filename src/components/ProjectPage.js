@@ -1,48 +1,31 @@
 import React from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 export default class ProjectPage extends React.Component {
   render() {
-    console.log(this.props);
-    // const { projectName } = this.props.match.params;
     return (
-      <div
-        style={{
-          width: "100%",
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center"
-        }}
-      >
-        <div>Header Nav</div>
+      <div className="project-page-container">
+        <NavBar projectNav={true} />
         <div
+          className="project-inner-upper"
           style={{
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center"
+            marginTop: "80px",
+            textAlign: "left"
           }}
         >
-          <div>{this.props.name}</div>
-          <div>{this.props.description}</div>
+          <div
+            style={{
+              width: "100%",
+              fontSize: "40px",
+              borderBottom: "1px solid #6a6a6a"
+            }}
+          >
+            <div>{this.props.name}</div>
+            {/* <div>{this.props.description}</div> */}
+          </div>
         </div>
-        <div
-          style={{
-            height: "10vh",
-            width: "100%",
-            marginTop: "15px",
-            backgroundColor: "lightgrey",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
-          }}
-        >
-          Footer
-        </div>
+        <Footer />
       </div>
     );
   }

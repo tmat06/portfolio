@@ -2,7 +2,7 @@ import React from "react";
 import { Motion, spring } from "react-motion";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import swal from "sweetalert";
+// import swal from "sweetalert";
 
 export default class ContactSection extends React.Component {
   constructor() {
@@ -237,7 +237,6 @@ export default class ContactSection extends React.Component {
                   type="submit"
                   value="Send"
                   fullWidth={true}
-                  type="submit"
                   aria-label="Send"
                   variant="extendedFab"
                   onClick={() => this.handleEmail()}

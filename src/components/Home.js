@@ -24,10 +24,10 @@ class Home extends Component {
           heightSize={"100vh"}
           textColor={"white"}
           title={true}
-          titleDescription={"Tbone"}
-          subDescription={"The Man with the Plan"}
+          titleDescription={"TIMMY MATTHEWS"}
+          subDescription={"Full Stack Web Developer"}
         />
-        <QuoteDisplay quote="TBone does things that others are too scared to do..." />
+        <QuoteDisplay quote="Timmy Matthews is a Full Stack Web Developer and a Mentor at DevMountain Provo.  He loves to code and is constantly learning new technologies to further fulfill his visions of projects." />
 
         <ProjectsDisplay />
         <ParallaxDisplay
