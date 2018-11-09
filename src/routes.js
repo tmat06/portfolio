@@ -13,6 +13,8 @@ export default (
         <ProjectPage
           name="Restaurant Roulette"
           description="This is a description about Restaurant Roulette"
+          next="/project/MooMoo Farms Delivery"
+          before="/project/RoboRace"
         />
       )}
     />
@@ -23,6 +25,8 @@ export default (
         <ProjectPage
           name="Moo Moo Farms"
           description="This is a description about Moo Moo Farms"
+          next="/project/Trivia"
+          before="/project/Restaurant Roulette"
         />
       )}
     />
@@ -33,6 +37,8 @@ export default (
         <ProjectPage
           name="Trivia Game"
           description="This is a description about Trivia Game"
+          next="/project/RoboRace"
+          before="/project/MooMoo Farms Delivery"
         />
       )}
     />
@@ -43,6 +49,8 @@ export default (
         <ProjectPage
           name="RoboRace"
           description="This is a description about RoboRace"
+          next="/project/Restaurant Roulette"
+          before="/project/Trivia"
         />
       )}
     />

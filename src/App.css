@@ -132,6 +132,15 @@
   width: 100%;
 }
 
+.project-page-container-upper {
+  align-items: center;
+  border-bottom: 1px solid #6a6a6a;
+  display: flex;
+  font-size: 40px;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .contact-container {
   align-items: center;
   background-color: #fafafa;
