@@ -15,33 +15,17 @@ export default function Footer() {
     >
       <div
         style={{
-          width: "30%",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center"
         }}
       >
-        <div>timmy.a.matthews@gmail.com</div>
-      </div>
-      <div
-        style={{
-          width: "30%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <div>(801) 919-6330</div>
-      </div>
-      <div
-        style={{
-          width: "30%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <div>Provo, Utah USA</div>
+        <div className="footer-text">
+          <div>timmy.a.matthews@gmail.com</div>
+          <div>(801) 919-6330</div>
+          <div>Provo, Utah USA</div>
+        </div>
       </div>
     </div>
   );

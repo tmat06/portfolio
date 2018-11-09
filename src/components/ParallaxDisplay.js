@@ -16,13 +16,9 @@ export default function ParallaxDisplay(props) {
       }}
     >
       <div
+        className="parallax-title-container"
         style={{
-          height: props.heightSize,
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center"
+          height: props.heightSize
         }}
       >
         <div

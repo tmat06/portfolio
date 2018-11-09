@@ -36,15 +36,15 @@ export default class NavBar extends React.Component {
     return (
       <Motion
         initialStyle={{
-          navHeight: 100,
+          navHeight: 90,
           navOpacity: 0,
           hamHover: 1,
           iconHover: 1
         }}
         style={{
           navHeight: this.state.navBarAnim
-            ? spring(80, { stiffness: 60, damping: 15 })
-            : spring(100, { stiffness: 60, damping: 15 }),
+            ? spring(70, { stiffness: 60, damping: 15 })
+            : spring(80, { stiffness: 60, damping: 15 }),
           navOpacity: this.state.navBarAnim
             ? spring(1, { stiffness: 60, damping: 15 })
             : spring(0, { stiffness: 60, damping: 15 }),
@@ -70,92 +70,78 @@ export default class NavBar extends React.Component {
             >
               <div
                 style={{
-                  opacity: mot.navOpacity,
+                  // opacity: mot.navOpacity,
+                  opacity: this.props.projectNav ? 1 : mot.navOpacity,
                   backgroundColor: "#191919",
                   height: "100%",
                   width: "100%"
                 }}
               />
               <div
+                className="nav-bar-container"
                 style={{
-                  position: "relative",
-                  top: -mot.navHeight,
-                  display: "flex",
-                  justifyContent: "space-between"
+                  top: -mot.navHeight
                 }}
               >
                 <div
                   style={{ cursor: "pointer" }}
-                  onMouseEnter={() => this.setState({ emailHover: true })}
-                  onMouseLeave={() => this.setState({ emailHover: false })}
+                  onMouseEnter={() => this.setState({ facebookHover: true })}
+                  onMouseLeave={() => this.setState({ facebookHover: false })}
                 >
-                  <img
-                    alt="Email Menu Icon"
-                    src="/email.PNG"
-                    style={{ height: mot.navHeight, opacity: mot.emailHover }}
-                  />
+                  <a
+                    href="https://www.facebook.com/timmy.matthews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      alt="Facebook Icon"
+                      src="/facebook.png"
+                      style={{
+                        height: mot.navHeight,
+                        opacity: mot.facebookHover
+                      }}
+                    />
+                  </a>
                 </div>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{ cursor: "pointer" }}
-                    onMouseEnter={() => this.setState({ facebookHover: true })}
-                    onMouseLeave={() => this.setState({ facebookHover: false })}
+                <div
+                  style={{ cursor: "pointer" }}
+                  onMouseEnter={() => this.setState({ githubHover: true })}
+                  onMouseLeave={() => this.setState({ githubHover: false })}
+                >
+                  <a
+                    href="https://github.com/tmat06"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://www.facebook.com/timmy.matthews"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        alt="Facebook Icon"
-                        src="/facebook.png"
-                        style={{
-                          height: mot.navHeight,
-                          opacity: mot.facebookHover
-                        }}
-                      />
-                    </a>
-                  </div>
-                  <div
-                    style={{ cursor: "pointer" }}
-                    onMouseEnter={() => this.setState({ githubHover: true })}
-                    onMouseLeave={() => this.setState({ githubHover: false })}
+                    <img
+                      alt="Github Menu Icon"
+                      src="/github.PNG"
+                      style={{
+                        height: mot.navHeight,
+                        opacity: mot.githubHover
+                      }}
+                    />
+                  </a>
+                </div>
+                <div
+                  style={{ cursor: "pointer" }}
+                  onMouseEnter={() => this.setState({ linkedInHover: true })}
+                  onMouseLeave={() => this.setState({ linkedInHover: false })}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/timmy-matthews/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://github.com/tmat06"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        alt="Github Menu Icon"
-                        src="/github.PNG"
-                        style={{
-                          height: mot.navHeight,
-                          opacity: mot.githubHover
-                        }}
-                      />
-                    </a>
-                  </div>
-                  <div
-                    style={{ cursor: "pointer" }}
-                    onMouseEnter={() => this.setState({ linkedInHover: true })}
-                    onMouseLeave={() => this.setState({ linkedInHover: false })}
-                  >
-                    <a
-                      href="https://www.linkedin.com/in/timmy-matthews/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        alt="LinkedIn Menu Icon"
-                        src="/linkedin.PNG"
-                        style={{
-                          height: mot.navHeight,
-                          opacity: mot.linkedInHover
-                        }}
-                      />
-                    </a>
-                  </div>
+                    <img
+                      alt="LinkedIn Menu Icon"
+                      src="/linkedin.PNG"
+                      style={{
+                        height: mot.navHeight,
+                        opacity: mot.linkedInHover
+                      }}
+                    />
+                  </a>
                 </div>
               </div>
             </div>

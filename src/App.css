@@ -25,6 +25,13 @@
   width: 100%;
 }
 
+.nav-bar-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .introduction-section {
   align-items: center;
   background-color: #fafafa;
@@ -34,6 +41,20 @@
   justify-content: center;
   min-height: 40vh;
   width: 100%;
+}
+
+.introduction-section-inner {
+  text-align: center;
+  width: 50%;
+}
+
+.parallax-title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .project-outer-container {
@@ -48,10 +69,13 @@
 
 .project-inner-upper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 20vh;
   width: 50%;
+  margin: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .project-inner-lower {
@@ -73,6 +97,14 @@
   width: 300px;
 }
 
+.project-header {
+  font-size: 40px;
+}
+
+.project-sub-header {
+  font-size: 25px;
+}
+
 .project-inner-tile {
   height: 100%;
   width: 100%;
@@ -91,6 +123,15 @@
   letter-spacing: 3px;
 }
 
+.project-page-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .contact-container {
   align-items: center;
   background-color: #fafafa;
@@ -104,11 +145,20 @@
 }
 
 .contact-container-upper-header {
-  height: 10vh;
+  min-height: 10vh;
   width: 100%;
   font-size: 40px;
   display: flex;
   align-items: center;
+}
+
+.footer-text {
+  align-items: center;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
 }
 
 /* Dog Animation//////////////////////////////////////// */
@@ -282,6 +332,10 @@
   .contact-container {
     width: 60%;
   }
+
+  .introduction-section-inner {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 1535px) {
   .project-inner-upper {
@@ -293,6 +347,10 @@
   }
 
   .contact-container {
+    width: 70%;
+  }
+
+  .introduction-section-inner {
     width: 70%;
   }
 }
@@ -308,6 +366,10 @@
   .contact-container {
     width: 80%;
   }
+
+  .introduction-section-inner {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .project-inner-upper {
@@ -321,10 +383,14 @@
   .contact-container {
     width: 100%;
   }
+
+  .introduction-section-inner {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 1025px) {
   .project-inner-upper {
-    width: 100%;
+    width: 95%;
   }
 
   .project-inner-lower {
@@ -333,13 +399,26 @@
   }
 }
 @media screen and (max-width: 916px) {
-  .project-inner-upper {
+  .nav-bar-container {
     justify-content: space-around;
+  }
+
+  .project-sub-header {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-text {
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .introduction-section {
     font-size: 25px;
+  }
+  .footer-text {
+    font-size: 13px;
   }
 }

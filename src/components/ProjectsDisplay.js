@@ -26,28 +26,20 @@ export default class ProjectsDisplay extends React.Component {
               {/* Inner Container */}
               <div className="project-inner-upper">
                 {/* Upper Titles */}
-                <div>
-                  <div style={{ fontSize: "40px" }}>My Latest Works</div>
-                  <p>Here's my jazz</p>
-                </div>
-                <div
-                  style={{ cursor: "pointer" }}
-                  onMouseEnter={() => this.setState({ viewAllHover: true })}
-                  onMouseLeave={() => this.setState({ viewAllHover: false })}
-                >
-                  <img
-                    src={"/view-all-icon.png"}
-                    alt="view all icon"
-                    style={{ opacity: mot.viewAllOpacity }}
-                  />
-                </div>
+                <div className="project-header">My Latest Works</div>
+                <p className="project-sub-header">
+                  Take a look at some of my projects I've worked on
+                </p>
               </div>
               {/* Collage */}
               <div className="project-inner-lower">
-                <ProjectTile name={"Restaurant Roulette"} img={""} />
-                <ProjectTile name={"MooMoo Farms Delivery"} img={""} />
+                <ProjectTile name={"Restaurant Roulette"} img={"/RR.PNG"} />
+                <ProjectTile
+                  name={"MooMoo Farms Delivery"}
+                  img={"/moomoocow.jpg"}
+                />
                 <ProjectTile name={"Trivia"} img={""} />
-                <ProjectTile name={"RoboRace"} img={""} />
+                <ProjectTile name={"RoboRace"} img={"/Roborace.jpg"} />
               </div>
             </div>
           );
