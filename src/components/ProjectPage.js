@@ -3,21 +3,23 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
-//React Slick
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-// import "./slick-fixes.css";
-
 export default class ProjectPage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      projectNav: true
+    };
+  }
+
   render() {
     return (
       <div className="project-page-container">
-        <NavBar projectNav={true} />
+        <NavBar projectNav={this.state.projectNav} />
         <div
           className="project-inner-upper"
           style={{
-            marginTop: "80px",
+            marginTop: "90px",
+            marginBottom: "-15px",
             textAlign: "left"
           }}
         >
@@ -39,58 +41,6 @@ export default class ProjectPage extends React.Component {
 
             {/* <div>{this.props.description}</div> */}
           </div>
-          <Slider
-            centerMode={true}
-            slidesToShow={1}
-            swipeToSlide={true}
-            focusOnSelect={true}
-          >
-            <div
-              style={{
-                width: "100%"
-              }}
-            >
-              <img
-                src="/IMG_0007.PNG"
-                alt="dog"
-                style={{
-                  borderRadius: "500px",
-                  width: "60%",
-                  margin: "auto"
-                }}
-              />
-            </div>
-            <div
-              style={{
-                width: "100%"
-              }}
-            >
-              <img
-                src="/IMG_0008.PNG"
-                alt="dog"
-                style={{
-                  borderRadius: "500px",
-                  width: "60%",
-                  margin: "auto"
-                }}
-              />
-            </div>
-            <div
-              style={{
-                width: "100%"
-              }}
-            >
-              <img
-                src="/IMG_0009.PNG"
-                alt="dog"
-                style={{
-                  borderRadius: "500px",
-                  width: "60%",
-                  margin: "auto"
-                }}
-              />
-            </div>
-          </Slider>
         </div>
         <Footer />
       </div>

@@ -6,7 +6,15 @@ export default class ProjectsDisplay extends React.Component {
   constructor() {
     super();
     this.state = {
-      viewAllHover: false
+      viewAllHover: false,
+      projectHeader: "My Latest Works",
+      projectSubHeader: "Take a look at some of my projects I've worked on",
+      projects: [
+        { name: "Restaurant Roulette", img: "/RR.PNG" },
+        { name: "MooMoo Farms Delivery", img: "/moomoocow.jpg" },
+        { name: "Trivia", img: "" },
+        { name: "RoboRace", img: "/Roborace.jpg" }
+      ]
     };
   }
   render() {
@@ -26,20 +34,16 @@ export default class ProjectsDisplay extends React.Component {
               {/* Inner Container */}
               <div className="project-inner-upper">
                 {/* Upper Titles */}
-                <div className="project-header">My Latest Works</div>
+                <div className="project-header">{this.state.projectHeader}</div>
                 <p className="project-sub-header">
-                  Take a look at some of my projects I've worked on
+                  {this.state.projectSubHeader}
                 </p>
               </div>
               {/* Collage */}
               <div className="project-inner-lower">
-                <ProjectTile name={"Restaurant Roulette"} img={"/RR.PNG"} />
-                <ProjectTile
-                  name={"MooMoo Farms Delivery"}
-                  img={"/moomoocow.jpg"}
-                />
-                <ProjectTile name={"Trivia"} img={""} />
-                <ProjectTile name={"RoboRace"} img={"/Roborace.jpg"} />
+                {this.state.projects.map((val, i) => {
+                  return <ProjectTile key={i} name={val.name} img={val.img} />;
+                })}
               </div>
             </div>
           );

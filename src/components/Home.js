@@ -11,7 +11,17 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      navbar: false
+      navbar: false,
+      img1: "/parallaxFront.jpg",
+      heightSize1: "100vh",
+      textColor: "#fafafa",
+      title: true,
+      titleDescription: "TIMMY MATTHEWS",
+      subDescription: "Full Stack Web Developer",
+      quote:
+        "Timmy Matthews is a Full Stack Web Developer and a Mentor at DevMountain Provo.  He loves to code and is constantly learning new technologies to further fulfill his visions of projects.",
+      img2: "/parallaxFront2.jpg",
+      heightSize2: "auto"
     };
   }
 
@@ -20,31 +30,23 @@ class Home extends Component {
       <div className="home-container">
         <NavBar />
         <ParallaxDisplay
-          img={"/parallaxFront.jpg"}
-          heightSize={"100vh"}
-          textColor={"white"}
-          title={true}
-          titleDescription={"TIMMY MATTHEWS"}
-          subDescription={"Full Stack Web Developer"}
+          img={this.state.img1}
+          heightSize={this.state.heightSize1}
+          textColor={this.state.textColor}
+          title={this.state.title}
+          titleDescription={this.state.titleDescription}
+          subDescription={this.state.subDescription}
         />
-        <QuoteDisplay quote="Timmy Matthews is a Full Stack Web Developer and a Mentor at DevMountain Provo.  He loves to code and is constantly learning new technologies to further fulfill his visions of projects." />
+        <QuoteDisplay quote={this.state.quote} />
 
         <ProjectsDisplay />
         <ParallaxDisplay
-          img={"/parallaxFront2.jpg"}
-          heightSize={"auto"}
-          textColor={"white"}
-          title={true}
+          img={this.state.img2}
+          heightSize={this.state.heightSize2}
+          textColor={this.state.textColor}
+          title={this.state.title}
           titleDescription={
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                minHeight: "70vh"
-              }}
-            >
+            <div className="skills-container">
               <div>Skills</div>
               <SkillsDisplay />
             </div>

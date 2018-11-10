@@ -1,19 +1,31 @@
 import React from "react";
 import IconDisplay from "./IconDisplay";
 
-export default function SkillsDisplay(props) {
-  return (
-    <div className="project-inner-lower">
-      <IconDisplay img="/images/React.png" title="React" />
-      <IconDisplay img="/images/html.png" title="HTML5" />
-      <IconDisplay img="/images/css.png" title="CSS6" />
-      <IconDisplay img="/images/git.png" title="Git" />
-      <IconDisplay img="/images/javascript.png" title="Javascript" />
-      <IconDisplay img="/images/node.png" title="Node" />
-      <IconDisplay img="/images/postgresql.png" title="PostgreSQL" />
-      <IconDisplay img="/images/express.png" title="Express" />
-      <IconDisplay img="/images/socket-io.svg" title="Socket.io" />
-      <IconDisplay img="/images/redux.png" title="Redux" />
-    </div>
-  );
+export default class SkillsDisplay extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      skills: [
+        { img: "/images/React.png", title: "React" },
+        { img: "/images/html.png", title: "HTML5" },
+        { img: "/images/css.png", title: "CSS6" },
+        { img: "/images/git.png", title: "Git" },
+        { img: "/images/javascript.png", title: "Javascript" },
+        { img: "/images/node.png", title: "Node" },
+        { img: "/images/postgresql.png", title: "PostgreSQL" },
+        { img: "/images/express.png", title: "Express" },
+        { img: "/images/socket-io.svg", title: "Socket.io" },
+        { img: "/images/redux.png", title: "Redux" }
+      ]
+    };
+  }
+  render() {
+    return (
+      <div className="project-inner-lower">
+        {this.state.skills.map((val, i) => {
+          return <IconDisplay key={i} img={val.img} title={val.title} />;
+        })}
+      </div>
+    );
+  }
 }
