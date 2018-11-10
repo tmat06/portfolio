@@ -127,7 +127,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: space-between;
   width: 100%;
 }
@@ -139,6 +138,14 @@
   font-size: 40px;
   justify-content: space-between;
   width: 100%;
+}
+
+.skills-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
 }
 
 .contact-container {
@@ -328,6 +335,23 @@
 }
 
 /* End of Dog Animation///////////////////////////////// */
+
+/* Slick Fixes////////////////////////////////////////// */
+.slick-list {
+  outline: none !important;
+  border: none;
+}
+
+.slick-slide {
+  outline: none !important;
+  border: none;
+}
+
+.slick-slide:focus {
+  outline: none;
+  border: none;
+}
+/* ///////////////////////////////////////////////////// */
 
 @media screen and (max-width: 1700px) {
   .project-inner-upper {

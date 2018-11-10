@@ -4,14 +4,22 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 export default class ProjectPage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      projectNav: true
+    };
+  }
+
   render() {
     return (
       <div className="project-page-container">
-        <NavBar projectNav={true} />
+        <NavBar projectNav={this.state.projectNav} />
         <div
           className="project-inner-upper"
           style={{
-            marginTop: "80px",
+            marginTop: "90px",
+            marginBottom: "-15px",
             textAlign: "left"
           }}
         >
@@ -20,15 +28,17 @@ export default class ProjectPage extends React.Component {
             <div style={{ display: "flex" }}>
               <Link to={this.props.before}>
                 <div style={{ cursor: "pointer" }}>
-                  <img src="/before.png" />
+                  <img src="/before.png" alt="before icon" />
                 </div>
               </Link>
               <Link to={this.props.next}>
                 <div style={{ cursor: "pointer" }}>
-                  <img src="/next.png" />
+                  <img src="/next.png" alt="next icon" />
                 </div>
               </Link>
             </div>
+            {/* //////////////////////////////////////// */}
+
             {/* <div>{this.props.description}</div> */}
           </div>
         </div>
