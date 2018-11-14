@@ -21,14 +21,15 @@ class Home extends Component {
       quote:
         "Timmy Matthews is a Full Stack Web Developer and a Mentor at DevMountain Provo.  He loves to code and is constantly learning new technologies to further fulfill his visions of projects.",
       img2: "/parallaxFront2.jpg",
-      heightSize2: "auto"
+      heightSize2: "auto",
+      homeIcon: "/home.PNG"
     };
   }
 
   render() {
     return (
       <div className="home-container">
-        <NavBar />
+        <NavBar homeIcon={this.state.homeIcon} />
         <ParallaxDisplay
           img={this.state.img1}
           heightSize={this.state.heightSize1}

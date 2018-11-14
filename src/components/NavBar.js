@@ -1,12 +1,13 @@
 import React from "react";
 import { Motion, spring } from "react-motion";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
       navBarAnim: false,
-      emailHover: false,
+      homeHover: false,
       githubHover: false,
       linkedInHover: false,
       facebookHover: false
@@ -48,7 +49,7 @@ export default class NavBar extends React.Component {
           navOpacity: this.state.navBarAnim
             ? spring(1, { stiffness: 60, damping: 15 })
             : spring(0, { stiffness: 60, damping: 15 }),
-          emailHover: this.state.emailHover
+          homeHover: this.state.homeHover
             ? spring(0.6, { stiffness: 125, damping: 15 })
             : spring(1, { stiffness: 125, damping: 15 }),
           githubHover: this.state.githubHover
@@ -83,6 +84,22 @@ export default class NavBar extends React.Component {
                   top: -mot.navHeight
                 }}
               >
+                <div
+                  style={{ cursor: "pointer" }}
+                  onMouseEnter={() => this.setState({ homeHover: true })}
+                  onMouseLeave={() => this.setState({ homeHover: false })}
+                >
+                  <Link to="/">
+                    <img
+                      alt="Home Icon"
+                      src={this.props.homeIcon}
+                      style={{
+                        height: mot.navHeight,
+                        opacity: mot.homeHover
+                      }}
+                    />
+                  </Link>
+                </div>
                 <div
                   style={{ cursor: "pointer" }}
                   onMouseEnter={() => this.setState({ facebookHover: true })}
