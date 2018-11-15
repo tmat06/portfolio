@@ -28,7 +28,7 @@
 .nav-bar-container {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -176,6 +176,7 @@
   flex-direction: column;
   font-size: 20px;
   justify-content: center;
+  width: 100%;
 }
 
 .project-carousel {
@@ -201,7 +202,7 @@
 
 .slide-arrow {
   height: 100%;
-  width: 10vw;
+  width: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,14 +213,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 50%;
+  background-color: #fafafa;
 }
 
 .project-page-description-display {
   color: #666;
   font-size: 25px;
   margin: 50px 0;
-  width: 50%;
+  width: 100%;
 }
 
 .project-page-description-skills {
@@ -232,7 +234,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 25%;
+  width: 100%;
 }
 
 /* Dog Animation//////////////////////////////////////// */
@@ -417,8 +419,11 @@
 
   .project-page-description-display {
     margin: 40px 0;
-    width: 60%;
   }
+
+  /* .project-page-description-container {
+    width: 60%;
+  } */
 }
 @media screen and (max-width: 1535px) {
   .project-inner-upper {
@@ -443,6 +448,9 @@
 
   .project-page-description-display {
     margin: 20px 0;
+  }
+
+  .project-page-description-container {
     width: 70%;
   }
 }
@@ -469,6 +477,9 @@
 
   .project-page-description-display {
     margin: 10px 0;
+  }
+
+  .project-page-description-container {
     width: 80%;
   }
 }
@@ -493,12 +504,12 @@
     width: 90%;
   } */
 
-  .project-page-description-display {
+  .project-page-description-container {
     width: 90%;
   }
 
   .project-page-icons {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 1025px) {
@@ -520,10 +531,6 @@
   }
 }
 @media screen and (max-width: 916px) {
-  .nav-bar-container {
-    justify-content: space-around;
-  }
-
   .project-sub-header {
     font-size: 20px;
   }

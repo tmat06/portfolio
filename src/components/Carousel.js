@@ -13,7 +13,24 @@ export default class Carousel extends React.Component {
     this.previousSlide = this.previousSlide.bind(this);
   }
 
+  componentDidMount() {
+    var timer = setInterval(() => {
+      const lastIndex = this.props.images.length - 1;
+      const shouldResetIndex = this.state.currentImageIndex === 0;
+      const index = shouldResetIndex
+        ? lastIndex
+        : this.state.currentImageIndex - 1;
+
+      this.setState({
+        currentImageIndex: index
+      });
+    }, 4000);
+
+    this.setState({ timer });
+  }
+
   previousSlide() {
+    clearInterval(this.state.timer);
     const lastIndex = this.props.images.length - 1;
     const shouldResetIndex = this.state.currentImageIndex === 0;
     const index = shouldResetIndex
@@ -26,6 +43,7 @@ export default class Carousel extends React.Component {
   }
 
   nextSlide() {
+    clearInterval(this.state.timer);
     const lastIndex = this.props.images.length - 1;
     const shouldResetIndex = this.state.currentImageIndex === lastIndex;
     const index = shouldResetIndex ? 0 : this.state.currentImageIndex + 1;
