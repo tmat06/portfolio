@@ -12,18 +12,14 @@ export default class ProjectPage extends React.Component {
     this.state = {
       projectNav: true,
       homeIcon: "/home.PNG",
-      githubIcon: "/github.PNG"
+      githubIcon: "/githubIcon.PNG"
     };
   }
 
   render() {
     return (
       <div className="project-page-container">
-        <NavBar
-          projectNav={this.state.projectNav}
-          homeIcon={this.state.homeIcon}
-          githubIcon={this.state.githubIcon}
-        />
+        <NavBar projectNav={this.state.projectNav} />
         <div
           className="project-inner-upper"
           style={{

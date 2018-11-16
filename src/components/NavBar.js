@@ -10,7 +10,9 @@ export default class NavBar extends React.Component {
       homeHover: false,
       githubHover: false,
       linkedInHover: false,
-      facebookHover: false
+      facebookHover: false,
+      homeIcon: "/home.PNG",
+      githubIcon: "/githubIcon.PNG"
     };
   }
 
@@ -92,7 +94,7 @@ export default class NavBar extends React.Component {
                     <Link to="/">
                       <img
                         alt="Home Icon"
-                        src={this.props.homeIcon}
+                        src={this.state.homeIcon}
                         style={{
                           height: mot.navHeight,
                           opacity: mot.homeHover
@@ -114,7 +116,7 @@ export default class NavBar extends React.Component {
                     >
                       <img
                         alt="Github Menu Icon"
-                        src={this.props.githubIcon}
+                        src={this.state.githubIcon}
                         style={{
                           height: mot.navHeight,
                           opacity: mot.githubHover
