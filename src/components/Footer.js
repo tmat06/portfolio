@@ -12,7 +12,6 @@ export default class Footer extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <Motion
         initialStyle={{ fbHover: 1, githubHover: 1, linkedInHover: 1 }}
