@@ -114,7 +114,7 @@ export default class NavBar extends React.Component {
                     >
                       <img
                         alt="Github Menu Icon"
-                        src="/github.PNG"
+                        src={this.props.githubIcon}
                         style={{
                           height: mot.navHeight,
                           opacity: mot.githubHover
