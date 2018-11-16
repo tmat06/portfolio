@@ -17,10 +17,11 @@ export default (
           next="/project/MooMoo Farms Delivery"
           before="/project/RoboRace"
           images={[
-            "RR.PNG",
+            "/images/RRLogin.PNG",
             "/images/google-maps.PNG",
             "/images/Results.PNG",
-            "/images/Profile.PNG"
+            "/images/Profile.PNG",
+            "/images/RRWinner.PNG"
           ]}
           siteURL="https://restaurantroulette.timmymatthews.com"
           githubRepoURL="https://github.com/tmat06/restaurant-roulette"
@@ -33,15 +34,16 @@ export default (
       render={() => (
         <ProjectPage
           name="Moo Moo Farms"
-          skills="GOOGLE API"
-          description="This is a description about Moo Moo Farms"
+          skills="REACT NATIVE | MATERIAL-UI | GOOGLE MAPS API"
+          description="A delivery service application designed for customers of the Moo Moo Farms Cambodia based dairy farm.  Integration of Google Maps allows the customer to designate pick up locations anywhere within the approved location.  My responsiblities were over the initial design and creation of the app as well as the implementation of the Google Map configurations."
           next="/project/Trivia"
           before="/project/Restaurant Roulette"
           images={[
-            "/moomoocow.jpg",
-            "/IMG_0008.PNG",
-            "/IMG_0009.PNG",
-            "/IMG_0014.PNG"
+            "/images/moomoo-mobile.PNG",
+            "/images/moomoo-mobile2.PNG",
+            "/images/moomoo-mobile3.PNG",
+            "/images/moomoo-mobile4.PNG",
+            "/images/moomoo-mobile5.PNG"
           ]}
           siteURL="https://itunes.apple.com/us/app/moo-moo-farms/id1434998665?mt=8&ign-mpt=uo%3D4"
           githubRepoURL="https://github.com/jamischarles/moo-moo-app"
@@ -54,15 +56,16 @@ export default (
       render={() => (
         <ProjectPage
           name="Trivia Game"
-          skills="REACT-MOTION"
-          description="This is a description about Trivia Game"
+          skills="REACT | SOCKET.IO | EXPRESS | REDUX | POSTGRESQL | MASSIVE | REGEX | REACT-MOTION | OPENTDB API"
+          description="A self-developed trivia based application implementing the use of Socket.io for real time responses.  Animations were done through the use of React-Motion.  React was used as the front end framework while Node and Express were used for the back end."
           next="/project/RoboRace"
           before="/project/MooMoo Farms Delivery"
           images={[
             "/images/trivia-hosting.PNG",
             "/images/trivia-login.PNG",
             "/images/trivia-questions.PNG",
-            "/images/trivia-results.PNG"
+            "/images/trivia-results.PNG",
+            "/images/trivia-winner.PNG"
           ]}
           siteURL="https://trivia.timmymatthews.com"
           githubRepoURL="https://github.com/tmat06/trivia-game"
@@ -80,10 +83,11 @@ export default (
           next="/project/Restaurant Roulette"
           before="/project/Trivia"
           images={[
-            "/Roborace.jpg",
-            "/Capture.PNG",
-            "/Capture3.PNG",
-            "/Capture4.PNG"
+            "/images/robo-race.PNG",
+            "/images/FinalResults.PNG",
+            "/images/Landing.PNG",
+            "/images/Race.PNG",
+            "/images/Loading.PNG"
           ]}
           siteURL="https://roboracegame.com"
           githubRepoURL="https://github.com/team-electron/RoboRace"

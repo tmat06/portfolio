@@ -11,8 +11,8 @@ export default class Arrow extends React.Component {
   render() {
     return (
       <Motion
-        initialStyle={{ arrowOpacity: 0 }}
-        style={{ arrowOpacity: this.state.hover ? spring(0.6) : spring(0) }}
+        initialStyle={{ arrowOpacity: 0.2 }}
+        style={{ arrowOpacity: this.state.hover ? spring(0.6) : spring(0.3) }}
       >
         {mot => {
           return (
