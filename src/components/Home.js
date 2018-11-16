@@ -19,7 +19,7 @@ class Home extends Component {
       titleDescription: "TIMMY MATTHEWS",
       subDescription: "Full Stack Web Developer",
       quote:
-        "Timmy Matthews is a Full Stack Web Developer and a Mentor at DevMountain Provo.  He loves to code and is constantly learning new technologies to further fulfill his visions of projects.",
+        "Timmy Matthews is a Full Stack Web Developer and a Mentor at DevMountain Provo.  He loves to code and is continually learning new technologies to further fulfill his visions of projects.",
       img2: "/parallaxFront2.jpg",
       heightSize2: "auto"
     };
