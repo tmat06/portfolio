@@ -25,8 +25,8 @@ export default class ProjectPage extends React.Component {
         <div
           className="project-inner-upper"
           style={{
-            marginTop: "90px",
-            marginBottom: "-15px",
+            marginTop: "50px",
+            // marginBottom: "-55px",
             textAlign: "left"
           }}
         >
@@ -94,7 +94,8 @@ export default class ProjectPage extends React.Component {
                       cursor: "pointer",
                       height: "50px",
                       width: "50px",
-                      opacity: mot.githubHover
+                      opacity: mot.githubHover,
+                      margin: "30px 0"
                     }}
                   >
                     <a
