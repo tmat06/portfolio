@@ -246,7 +246,7 @@ export default class ContactSection extends React.Component {
                 <input
                   type="hidden"
                   name="_next"
-                  value="http://localhost:3000"
+                  value="https://timmymatthews.com"
                 />
               </form>
             </div>
