@@ -83,7 +83,7 @@ export default class NavBar extends React.Component {
                   top: -mot.navHeight
                 }}
               >
-                <div style={{ margin: "0 20px" }}>
+                <div style={{ margin: "0 0px" }}>
                   <div
                     style={{ cursor: "pointer" }}
                     onMouseEnter={() => this.setState({ homeHover: true })}
@@ -101,7 +101,7 @@ export default class NavBar extends React.Component {
                     </Link>
                   </div>
                 </div>
-                <div style={{ margin: "0 20px" }}>
+                <div style={{ margin: "0 0px" }}>
                   <div
                     style={{ cursor: "pointer" }}
                     onMouseEnter={() => this.setState({ githubHover: true })}
