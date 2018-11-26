@@ -13,7 +13,8 @@ export default class ProjectsDisplay extends React.Component {
         { name: "Restaurant Roulette", img: "/RR.PNG" },
         { name: "MooMoo Farms Delivery", img: "/moomoocow.jpg" },
         { name: "Trivia", img: "" },
-        { name: "RoboRace", img: "/Roborace.jpg" }
+        { name: "RoboRace", img: "/Roborace.jpg" },
+        { name: "Visual Workshop", img: "/images/VW.PNG" },
       ]
     };
   }

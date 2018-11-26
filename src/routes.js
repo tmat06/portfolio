@@ -15,7 +15,7 @@ export default (
           skills="REACT | NODE | EXPRESS | POSTGRESQL | JAVASCRIPT | GIT | SOCKET.IO | REDUX | MATERIAL UI | OUTSIDE API"
           description="A self-developed application to help users select restaurants near a specific address. Google Places API was used in order to collect restaurants within a specific range designated by the user. React was used as the front end framework while Node and Express were used for the back end development."
           next="/project/MooMoo Farms Delivery"
-          before="/project/RoboRace"
+          before="/project/Visual Workshop"
           images={[
             "/images/RRLogin.PNG",
             "/images/google-maps.PNG",
@@ -80,7 +80,7 @@ export default (
           name="RoboRace"
           skills="REACT | NODE | EXPRESS | POSTGRESQL | SOCKET.IO | OUTSIDE API | CRON | MATERIAL UI | REDUX | REACT-MOTION"
           description="Inspired by Jackbox.tv games, this application implements Socket.io heavily to create a real-time trivia quiz game played with up to multiple players. I was personally involved with the implementation of Cron, Socket.io, Overall design, as well as lead over the data flow of the project. React was used as the front end framework while Node and Express was used for the back end."
-          next="/project/Restaurant Roulette"
+          next="/project/Visual Workshop"
           before="/project/Trivia"
           images={[
             "/images/robo-race.PNG",
@@ -91,6 +91,29 @@ export default (
           ]}
           siteURL="https://roboracegame.com"
           githubRepoURL="https://github.com/team-electron/RoboRace"
+        />
+      )}
+    />
+    <Route
+      exact
+      path="/project/Visual Workshop"
+      render={() => (
+        <ProjectPage
+          name="Visual Workshop"
+          skills="REACT | REACT-MOTION | CHART.JS | PARTICLES.JS | SEMANTIC UI | PARALLAX.JS | SLICK-CAROUSEL"
+          description="The objective is to encourage exploration and experimentation. By showing students small but simple examples of npm packages that can greatly enhance simple apps will lead students to place focus on improving their websites visually as well as help them realize the power that can come from finding useful npm packages."
+          next="/project/Restaurant Roulette"
+          before="/project/RoboRace"
+          images={[
+            "/images/VisualWorkshop1.PNG",
+            "/images/VisualWorkshop2.PNG",
+            "/images/VisualWorkshop3.PNG",
+            "/images/VisualWorkshop4.PNG",
+            "/images/VisualWorkshop5.PNG",
+           
+          ]}
+          siteURL="https://github.com/tmat06/workshop-visual"
+          githubRepoURL="https://github.com/tmat06/workshop-visual"
         />
       )}
     />
