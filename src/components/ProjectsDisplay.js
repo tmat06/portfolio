@@ -15,6 +15,7 @@ export default class ProjectsDisplay extends React.Component {
         { name: "Trivia", img: "" },
         { name: "RoboRace", img: "/Roborace.jpg" },
         { name: "Visual Workshop", img: "/images/VW.PNG" },
+        { name: "React-Spring Workshop", img: "/images/React-Spring.PNG" }
       ]
     };
   }
