@@ -15,7 +15,7 @@ export default (
           skills="REACT | NODE | EXPRESS | POSTGRESQL | JAVASCRIPT | GIT | SOCKET.IO | REDUX | MATERIAL UI | OUTSIDE API"
           description="A self-developed application to help users select restaurants near a specific address. Google Places API was used in order to collect restaurants within a specific range designated by the user. React was used as the front end framework while Node and Express were used for the back end development."
           next="/project/MooMoo Farms Delivery"
-          before="/project/Visual Workshop"
+          before="/project/React-Spring Workshop"
           images={[
             "/images/RRLogin.PNG",
             "/images/google-maps.PNG",
@@ -102,18 +102,39 @@ export default (
           name="Visual Workshop"
           skills="REACT | REACT-MOTION | CHART.JS | PARTICLES.JS | SEMANTIC UI | PARALLAX.JS | SLICK-CAROUSEL"
           description="The objective is to encourage exploration and experimentation. By showing students small but simple examples of npm packages that can greatly enhance simple apps will lead students to place focus on improving their websites visually as well as help them realize the power that can come from finding useful npm packages."
-          next="/project/Restaurant Roulette"
+          next="/project/React-Spring Workshop"
           before="/project/RoboRace"
           images={[
             "/images/VisualWorkshop1.PNG",
             "/images/VisualWorkshop2.PNG",
             "/images/VisualWorkshop3.PNG",
             "/images/VisualWorkshop4.PNG",
-            "/images/VisualWorkshop5.PNG",
-           
+            "/images/VisualWorkshop5.PNG"
           ]}
           siteURL="https://github.com/tmat06/workshop-visual"
           githubRepoURL="https://github.com/tmat06/workshop-visual"
+        />
+      )}
+    />
+    <Route
+      exact
+      path="/project/React-Spring Workshop"
+      render={() => (
+        <ProjectPage
+          name="React-Spring Workshop"
+          skills="REACT | NEXT.JS | REACT-SPRING | SVG ANIMATIONS | MATERIAL UI ICONS"
+          description="A DevMountain workshop introducing students to the React-Spring animation library.  Examples emphasizing the ease of using React-Spring for component transitions and trailing effects.  Simple code snippets are shown to allow interactivity between students and instructor."
+          next="/project/Restaurant Roulette"
+          before="/project/Visual Workshop"
+          images={[
+            "/images/ReactSpringWorkshop1.PNG",
+            "/images/ReactSpringWorkshop2.PNG",
+            "/images/ReactSpringWorkshop3.PNG",
+            "/images/ReactSpringWorkshop4.PNG",
+            "/images/ReactSpringWorkshop5.PNG"
+          ]}
+          siteURL="https://github.com/tmat06/workshop-react-spring"
+          githubRepoURL="https://github.com/tmat06/workshop-react-spring"
         />
       )}
     />
