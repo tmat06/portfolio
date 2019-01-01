@@ -14,6 +14,7 @@ export default class SkillsDisplay extends React.Component {
         { img: "/images/node.png", title: "Node" },
         { img: "/images/postgresql.png", title: "PostgreSQL" },
         { img: "/images/express.png", title: "Express" },
+        { img: "/images/jest.png", title: "Jest" },
         { img: "/images/socket-io.svg", title: "Socket.io" },
         { img: "/images/redux.png", title: "Redux" },
         { img: "/images/RegEx.png", title: "RegEx" },
